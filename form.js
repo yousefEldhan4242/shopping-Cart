@@ -13,7 +13,8 @@ const regPassword =
 
 // Check If The User Has Logged In
 if (localStorage.getItem("email") && localStorage.getItem("password")) {
-  window.location.pathname = "/home.html";
+  // window.location.pathname = "/home.html";
+  btn.click();
 }
 
 btn.addEventListener("click", (e) => {
