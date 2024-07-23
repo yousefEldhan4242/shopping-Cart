@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <title>Cart</title>
+  </head>
+  <body class="bg-gray-100">
+    <header class="bg-gray-800 p-4 sticky top-0">
+      <nav>
+        <div class="container flex justify-between items-center">
+          <div class="text-white text-2xl font-bold">
+            <a href="home.html">Home</a>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div
+              class="user-name bg-blue-500 text-white rounded-full w-10 h-10 hidden xs:flex items-center justify-center text-lg font-bold"
+            ></div>
+            <button
+              class="text-white px-4 py-2 rounded mr-2 logout-btn duration-300"
+            ></button>
+            <div class="text-white">
+              <a href="cart.html" class="text-lg"
+                ><i class="fa-solid fa-cart-shopping mr-2 text-[30px]"></i>
+                <span class="types-of-products text-[30px]"></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div
+        id="overlay-logout"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"
+      >
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm">
+          <h2 class="text-xl font-semibold text-gray-800">
+            Are you sure you want to logout?
+          </h2>
+          <div class="mt-4">
+            <button
+              id="logoutconfirm"
+              class="bg-red-500 text-white px-4 py-2 rounded mr-2 hover:bg-red-600 duration-300"
+            >
+              Logout
+            </button>
+            <button
+              id="cancelLogoutButton"
+              class="bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400 duration-300"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container mx-auto mt-5">
+      <h1 class="text-[50px] mb-5">Total: <span class="total"></span></h1>
+      <table class="w-full bg-white border border-gray-200">
+        <thead>
+          <tr>
+            <th
+              class="px-4 py-2 border-b border-gray-200 id-th hidden sm:table-cell"
+            >
+              ID
+            </th>
+            <th
+              class="px-4 py-2 border-b border-gray-200 text-left hidden sm:table-cell"
+            >
+              Title
+            </th>
+            <th class="px-4 py-2 border-b border-gray-200 image-th">Img</th>
+            <th class="px-4 py-2 border-b border-gray-200">Price</th>
+            <th class="px-4 py-2 border-b border-gray-200">Quantity</th>
+            <th class="px-4 py-2 border-b border-gray-200">Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="buy-btn text-right">
+        <button
+          class="bg-blue-500 hover:bg-blue-700 duration-300 text-white font-bold py-2 px-4 rounded mt-10 mb-28 w-full xs:w-fit"
+        >
+          Buy
+        </button>
+      </div>
+    </main>
+
+    <div
+      id="overlay-buy"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm relative"></div>
+    </div>
+
+    <audio
+      id="buy-audio"
+      src="audios/short-success-sound-glockenspiel-treasure-video-game-6346.mp3"
+      preload="auto"
+    ></audio>
+
+    <script src="cart.js"></script>
+  </body>
+</html>

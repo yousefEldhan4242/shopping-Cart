@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="output.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <header class="bg-gray-800 p-4 sticky top-0 z-[100]">
+      <nav>
+        <div class="container flex justify-between items-center">
+          <div class="text-white text-2xl font-bold">
+            <a href="home.html">Home</a>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div
+              class="user-name bg-blue-500 text-white rounded-full w-10 h-10 hidden xs:flex items-center justify-center text-lg font-bold"
+            ></div>
+            <button
+              class="text-white px-4 py-2 rounded mr-2 logout-btn duration-300"
+            ></button>
+            <div class="text-white">
+              <a href="cart.html" class="text-lg"
+                ><i class="fa-solid fa-cart-shopping mr-2 text-[30px]"></i
+                ><span class="types-of-products text-[30px]"></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div
+        id="overlay-logout"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"
+      >
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm">
+          <h2 class="text-xl font-semibold text-gray-800">
+            Are you sure you want to logout?
+          </h2>
+          <div class="mt-4">
+            <button
+              id="logoutconfirm"
+              class="bg-red-500 text-white px-4 py-2 rounded mr-2 hover:bg-red-600 duration-300"
+            >
+              Logout
+            </button>
+            <button
+              id="cancelLogoutButton"
+              class="bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400 duration-300"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main
+      class="cont bg-gray-100 p-6 grid gap-5 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]"
+    ></main>
+    <script src="home.js"></script>
+  </body>
+</html>
