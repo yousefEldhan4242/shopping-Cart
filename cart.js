@@ -296,7 +296,6 @@ if (localStorage.getItem("email") && localStorage.getItem("password")) {
   logOutOrLogInBtn.classList.add("bg-red-500", "hover:bg-red-600");
 } else {
   logOutOrLogInBtn.textContent = "Login";
-  logOutOrLogInBtn.href = "index.html";
   logOutOrLogInBtn.classList.add("bg-blue-500", "hover:bg-blue-700");
 }
 
@@ -312,14 +311,16 @@ if (userNamevalue) {
 // Handle Logging Out
 logOutOrLogInBtn.addEventListener("click", () => {
   if (logOutOrLogInBtn.textContent == "Logout") {
-    e.preventDefault();
     logOutMessage.classList.remove("hidden");
     logOutMessage.classList.add("flex", "items-center", "justify-center");
+  } else {
+    window.location.href = "/index.html";
   }
 });
 
 logOutConfirmlBtn.addEventListener("click", () => {
   localStorage.clear();
+  window.location.href = "/index.html";
 });
 logOutCancelBtn.addEventListener("click", () => {
   logOutMessage.classList.remove("flex", "items-center", "justify-center");
