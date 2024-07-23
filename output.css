@@ -636,7 +636,7 @@ video {
 }
 
 .form-container {
-  background-image: url(imgs/growtika-mlpsHpUUCHY-unsplash.jpg);
+  background-image: url(imgs/form.jpg);
   background-size: cover;
   .form {
     backdrop-filter: blur(7px) saturate(131%);
